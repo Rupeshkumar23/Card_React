@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
-  Navigate,
   Route,
   RouterProvider,
   createBrowserRouter,
@@ -25,7 +24,6 @@ const router = createBrowserRouter(
       <Route path="tour" element={<TourList />} />
       <Route path="contact" element={<Contact />} />
       <Route path="signup" element={<SignUp/>} />
-      {/* <Route path="/*" element={<Navigate to="/"/>} /> */}
       <Route path="*" element={<Error />} />
     </Route>
   )
