@@ -12,8 +12,8 @@ import { Container } from "react-bootstrap";
 const Home = () => {
   return (
     <>
-      <Container className="pt-5 pb-5  ">
-        <Carousel fade>
+     <Container className="pt-5 pb-5  "> 
+         <Carousel fade>
           <Carousel.Item>
             <img
               className="d-block w-100 img-fluid rounded img_1"
@@ -55,10 +55,12 @@ const Home = () => {
               </p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
-      </Container>
-      <Container >
-        <h1 className="fs-3 fw-bold bg-dark text-white text-uppercase text-center mt-2">Visit Our Famous Countries</h1>
+        </Carousel> 
+     </Container> 
+      <Container>
+        <h1 className="fs-3 fw-bold bg-dark text-white text-uppercase text-center mt-2">
+          Visit Our Famous Countries
+        </h1>
         <div className=" py-5 Nav_bg3">
           <div className="container-fluid">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
