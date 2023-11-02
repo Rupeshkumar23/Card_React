@@ -27,7 +27,7 @@ const Footer = () => {
 
             <div className="col-md-2">
               <h6 className="text-uppercase font-weight-bold">
-                <Link to="/awards" className="text-white">
+                <Link to="/Events" className="text-white">
                 Seasons & Events
                 </Link>
               </h6>

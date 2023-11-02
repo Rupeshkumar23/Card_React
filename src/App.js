@@ -2,10 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
-  Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
 } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./components/Navbar/Home";
@@ -16,18 +14,35 @@ import Header from "./components/Navbar/Header";
 import Error from "./components/Navbar/Error";
 import SignUp from "./components/SignUp";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="tour" element={<TourList />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="signup" element={<SignUp/>} />
-      <Route path="*" element={<Error />} />
-    </Route>
-  )
-);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "tour",
+        element: <TourList />,
+      },
+      {
+        path: "signup",
+        element: <SignUp />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
